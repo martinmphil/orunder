@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <meta charset="utf-8" />
+  <title>Orunder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Us-vs-Them roll-low-to-succeed Orunder role-playing game dice mechanic."
+  />
+  <meta name="keywords" content="Orunder, RPG" />
+  <meta name="author" content="martin@dancewith.co.uk" />
+  <meta name="created" content="2020-06-21" />
+  <link rel="stylesheet" type="text/css" href="orunder2021.css" />
+
+  <body>
+    <noscript>Please enable JavaScript to run this app.</noscript>
+
+    <header>
+      <hgroup>
+        <h1><a href="http://www.dancewith.co.uk/rpg/">Orunder</a></h1>
+        <h2>
+          - the whole party succeeds if anyone rolls equal or-under their target
+          number
+        </h2>
+      </hgroup>
+    </header>
+
+    <main>
+      <div class="d100AndReset">
+        <div>
+          <input type="checkbox" name="d100Input" id="d100Input" value="d100" />
+          <label for="d100Input">
+            d100
+          </label>
+        </div>
+        <div class="resetButtonContainer">
+          <button onclick="reset()" type="button" aria-label="reset app">
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <form onchange="nSet(elements['playerNbrs'].value)">
+        <fieldset class="playerNbrsFieldset">
+          <p>Please select number of players.</p>
+          <div class="flexboxWrapper">
+            <input type="radio" id="n1" name="playerNbrs" value="1" />
+            <label for="n1"> 1 </label>
+
+            <input type="radio" id="n2" name="playerNbrs" value="2" />
+            <label for="n2"> 2 </label>
+
+            <input type="radio" id="n3" name="playerNbrs" value="3" checked />
+            <label for="n3"> 3 </label>
+
+            <input type="radio" id="n4" name="playerNbrs" value="4" />
+            <label for="n4"> 4 </label>
+
+            <input type="radio" id="n5" name="playerNbrs" value="5" />
+            <label for="n5"> 5 </label>
+
+            <input type="radio" id="n6" name="playerNbrs" value="6" />
+            <label for="n6"> 6 </label>
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="bothUsAndThemForm">
+        <fieldset class="usFieldset">
+          <section class="usOrThemInputs">
+            <h3>Us</h3>
+            <input
+              type="number"
+              name="usInput"
+              id="usInput"
+              min="0"
+              value="10"
+            />
+            <button id="minus1Us" type="button" aria-label="minus one from us">
+              -
+            </button>
+            <button id="plus1Us" type="button" aria-label="add one to us">
+              +
+            </button>
+          </section>
+
+          <section class="bothAdvantageInputSections advantageUsSection">
+            <h4>Advantages</h4>
+            <button
+              id="minus1AdvUs"
+              type="button"
+              aria-label="minus one advantage from us"
+            >
+              -
+            </button>
+            <input type="number" name="advUsInput" id="advUsInput" value="0" />
+            <button
+              id="plus1AdvUs"
+              type="button"
+              aria-label="add one advantage to us"
+            >
+              +
+            </button>
+          </section>
+        </fieldset>
+
+        <fieldset class="themFieldset">
+          <section class="usOrThemInputs">
+            <h3>Them</h3>
+            <input
+              type="number"
+              name="themInput"
+              id="themInput"
+              min="0"
+              value="10"
+            />
+            <button
+              id="minus1Them"
+              type="button"
+              aria-label="minus one from them"
+            >
+              -
+            </button>
+            <button id="plus1Them" type="button" aria-label="add one to them">
+              +
+            </button>
+          </section>
+
+          <section class="bothAdvantageInputSections advantageThemSection">
+            <h4>Advantages</h4>
+            <button
+              id="minus1AdvThem"
+              type="button"
+              aria-label="minus one advantage from them"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              name="advThemInput"
+              id="advThemInput"
+              value="0"
+            />
+            <button
+              id="plus1AdvThem"
+              type="button"
+              aria-label="add one advantage to them"
+            >
+              +
+            </button>
+          </section>
+        </fieldset>
+      </form>
+
+      <output
+        name="edict"
+        for="playerNbrs, usInput, themInput, advUs, advThem"
+      ></output>
+    </main>
+    <footer><span id="precisUs"></span> <span id="precisThem"></span></footer>
+    <script src="orunder2021.js"></script>
+  </body>
+</html>
