@@ -526,6 +526,11 @@
           }
           refresh(state);
         });
+        advThemInput.addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            advThemInput.blur();
+          }
+        });
         var minus1AdvThem = document.getElementById("minus1AdvThem");
         minus1AdvThem.addEventListener("click", function () {
           var x = Math.round(--state.advThem);

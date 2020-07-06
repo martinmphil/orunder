@@ -90,7 +90,6 @@ var setup = function () {
         state.d100 = d100Input.checked;
         refresh(state);
     });
-    // We
     var usInput = document.getElementById("usInput");
     usInput.addEventListener("input", function () {
         usSet(usInput.value);
@@ -131,7 +130,6 @@ var setup = function () {
         advUsInput.value = x.toString();
         refresh(state);
     });
-    // They
     var themInput = document.getElementById("themInput");
     themInput.addEventListener("input", function () {
         themSet(themInput.value);
@@ -157,6 +155,11 @@ var setup = function () {
             state.advThem = x;
         }
         refresh(state);
+    });
+    advThemInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            advThemInput.blur();
+        }
     });
     var minus1AdvThem = document.getElementById("minus1AdvThem");
     minus1AdvThem.addEventListener("click", function () {
@@ -195,7 +198,6 @@ var reset = function () {
     d100Input.checked = false;
     refresh(state);
 };
-// Some browsers persist input values through page refreshes.
 reset();
 function orunderDataStandAloneFn() {
     return [

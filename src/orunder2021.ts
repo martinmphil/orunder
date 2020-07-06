@@ -196,6 +196,13 @@ const setup = () => {
     }
     refresh(state);
   });
+  // blurring last number input with enter key
+  // retracts soft number-keypad in chrome
+  advThemInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      advThemInput.blur();
+    }
+  });
 
   const minus1AdvThem = document.getElementById(
     "minus1AdvThem"
