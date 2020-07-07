@@ -1,4 +1,3 @@
-"use strict";
 var instruct = function (n, us, them, advUs, advThem, d100) {
     if (n === void 0) { n = 3; }
     if (us === void 0) { us = 1; }
@@ -16,7 +15,7 @@ var instruct = function (n, us, them, advUs, advThem, d100) {
             ? 1 / logarithmicScaling(deltaAdv)
             : 1;
     var usVsThem = (us / them) * forceMultiplier;
-    var nData = orunderDataStandAloneFn().filter(function (x) {
+    var nData = orunder6pDataFn().filter(function (x) {
         return x.n === n;
     });
     var actualFR = parseFloat(usVsThem.toPrecision(4));
@@ -40,7 +39,7 @@ var state = {
     them: 10,
     advUs: 0,
     advThem: 0,
-    d100: false,
+    d100: false
 };
 var nSet = function (a) {
     var n = 3;
@@ -199,7 +198,7 @@ var reset = function () {
     refresh(state);
 };
 reset();
-function orunderDataStandAloneFn() {
+function orunder6pDataFn() {
     return [
         { n: 1, d: 6, t: 1, f: 0.3334 },
         { n: 1, d: 6, t: 2, f: 0.6666 },

@@ -26,18 +26,16 @@
     </header>
 
     <main>
-      <div class="d100AndReset">
-        <div>
-          <input type="checkbox" name="d100Input" id="d100Input" value="d100" />
-          <label for="d100Input">
-            d100
-          </label>
-        </div>
-        <div class="resetButtonContainer">
-          <button onclick="reset()" type="button" aria-label="reset app">
-            Reset
-          </button>
-        </div>
+      <div class="d100checkbox">
+        <input type="checkbox" name="d100Input" id="d100Input" value="d100" />
+        <label for="d100Input">
+          d100
+        </label>
+      </div>
+      <div class="resetButtonContainer">
+        <button onclick="reset()" type="button" aria-label="reset app">
+          Reset
+        </button>
       </div>
 
       <form onchange="nSet(elements['playerNbrs'].value)">
@@ -158,6 +156,6 @@
       ></output>
     </main>
     <footer><span id="precisUs"></span> <span id="precisThem"></span></footer>
-    <script src="orunder2021.js"></script>
+    <script src="orunder6p.js"></script>
   </body>
 </html>

@@ -34,17 +34,17 @@ button {
   cursor: pointer;
 }
 
-.d100AndReset {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.d100checkbox {
+  float: left;
 }
 
 .resetButtonContainer {
-  justify-self: end;
+  float: right;
 }
 
 /* Green */
 .playerNbrsFieldset {
+  clear: both;
   border: none;
   text-align: center;
 }

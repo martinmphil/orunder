@@ -21,7 +21,7 @@ const instruct = (
 
   const usVsThem = (us / them) * forceMultiplier;
 
-  const nData = orunderDataStandAloneFn().filter((x) => {
+  const nData = orunder6pDataFn().filter((x) => {
     return x.n === n;
   });
 
@@ -258,7 +258,7 @@ const reset = () => {
 // Some browsers persist input values through page refreshes.
 reset();
 
-function orunderDataStandAloneFn() {
+function orunder6pDataFn() {
   return [
     { n: 1, d: 6, t: 1, f: 0.3334 },
     { n: 1, d: 6, t: 2, f: 0.6666 },
