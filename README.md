@@ -16,8 +16,8 @@ Computerised aid for [tabletop role-playing game](https://en.wikipedia.org/wiki/
 
 See [Orunder rulebook and web app](http://www.dancewith.co.uk/rpg/)
 
+![orunder_app](https://user-images.githubusercontent.com/37618836/86445453-4ac57a80-bd0a-11ea-92cb-3ef49647687d.png)
+
 ## Compile TypeScript
 
 Install TypeScript then, in the top directory, run the TypeScript compiler with the commands `tsc --removeComments orunder6p.ts` and `tsc --removeComments orunder9p.ts`. Deploy `orunder6p.js` and `orunder9p.js` with `index.html`, `orunder9p.html` and `orunder2021.css`.
-
-![orunder_app](https://user-images.githubusercontent.com/37618836/86445453-4ac57a80-bd0a-11ea-92cb-3ef49647687d.png)
