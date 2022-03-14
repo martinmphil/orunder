@@ -1,6 +1,6 @@
 # Orunder
 
-![knight_dice_rocket](https://user-images.githubusercontent.com/37618836/86445565-86604480-bd0a-11ea-9660-198e81ad55e1.png)
+![knight dice rocket](https://user-images.githubusercontent.com/37618836/158141747-e46b29de-6e8c-4fc9-b53a-33ac30b7d931.png)
 
 Computerised aid for [tabletop role-playing game](https://en.wikipedia.org/wiki/Tabletop_role-playing_game).
 
